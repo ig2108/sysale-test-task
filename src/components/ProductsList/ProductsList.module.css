@@ -1,0 +1,18 @@
+.productList {
+  display: flex;
+  flex-flow: row wrap;
+  width: 64rem;
+  margin: 0 auto;
+}
+
+.productItem {
+  width: 20rem;
+  margin-right: 2rem;
+  margin-bottom: 1.875rem;
+  background-color: #f8fafc;
+  border-radius: 1.5625rem;
+}
+
+.productItem:nth-child(3n) {
+  margin-right: 0;
+}

@@ -17,7 +17,6 @@ export default class App extends Component {
     return (
       <div className={styles.container}>
         <ProductsList products={products}/>
-        <img src="../../images/shampoo.jpg" alt="test"/>
       </div>
     );
   };

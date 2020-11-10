@@ -1,7 +1,6 @@
 import React from 'react';
 
 import styles from './ProductItem.module.css';
-// import moduleName from '../../../src/images/shampoo.jpg '
 
 const ProductItem = ({product}) => {
   const handleSubmit = () => {
