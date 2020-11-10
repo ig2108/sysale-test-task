@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "image": "https://www.interfax.ru/ftproot/textphotos/2019/05/17/700gc.jpg",
+    "name": "Шампунь",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+    "colors": ["Жёлтый", "Красный", "Зелёный"],
+    "price": 200,
+    "sizes": [100, 200, 300],
+    "quantity": 1,
+    "isNew": true
+  },
+  {
+    "id": 2,
+    "image": "./images/gel.jpg",
+    "name": "Гель",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+    "colors": ["Жёлтый", "Красный", "Зелёный"],
+    "price": 300,
+    "sizes": [100, 200, 300],
+    "quantity": 1,
+    "isNew": true
+  },
+  {
+    "id": 3,
+    "image": "../../images/image23.svg",
+    "name": "Бальзам",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+    "colors": ["Жёлтый", "Красный", "Зелёный"],
+    "price": 400,
+    "sizes": [100, 200, 300],
+    "quantity": 1,
+    "isNew": true
+  }
+]
