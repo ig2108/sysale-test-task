@@ -1,4 +1,124 @@
+.productItem__new {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 26px;
+  border-radius: 30px;
+  margin: 46px 38px 0px 20px;
+  color: #fff;
+  font-weight: 500;
+  size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  background: linear-gradient(261.65deg, #efbb37 -3.95%, #cf9e1f 109.44%);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.makeTransparent {
+  opacity: 0;
+}
+
+.productItem__image_wrap {
+  overflow: hidden;
+  width: 168px;
+  margin: 53px 48px 25px 0;
+}
+
 .productItem__image {
   display: block;
-  width: 8.9375rem;
+  width: 168px;
+  border-radius: 25px;
+  transition: transform 500ms ease;
+}
+
+.productItem__image:hover {
+  transform: scale(1.5);
+}
+
+.productItem__icon_wraper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 46px;
+  margin-top: 36px;
+  border-radius: 30px;
+  background-color: #fff;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.productItem__icon_wraper:hover,
+.productItem__icon_wraper:focus {
+  background-color: #f9fafc;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  transition: background-color 300ms linear;
+  transition: box-shadow 300ms linear;
+}
+
+.productItem__icon {
+  display: block;
+  background-image: url('../../images/Vector.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+}
+
+.productItem__icon:active {
+  background-image: url('../../images/complete.svg');
+  transition: background-image 1ms linear;
+}
+
+.productItem__name {
+  width: 254px;
+  height: 29px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #2c2c2c;
+}
+
+.productItem__description {
+  width: 318px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #2c2c2c;
+}
+
+/* ================ MEDIA ================ */
+
+@media (min-width: 1787px) {
+  .productItem__new {
+    width: 71px;
+    height: 26px;
+    margin: 46px 57px 0px 30px;
+  }
+
+  .productItem__image_wrap {
+    width: 256px;
+    margin-right: 82px;
+  }
+
+  .productItem__image {
+    width: 256px;
+  }
+
+  .productItem__icon_wraper {
+    margin-right: 31px;
+  }
+
+  .productItem__name {
+    width: 385px;
+  }
+
+  .productItem__description {
+    width: 483px;
+  }
 }

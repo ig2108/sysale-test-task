@@ -7,16 +7,31 @@ import styles from './App.module.css';
 export default class App extends Component {
   state = { 
     products: productsFromJson,
+    choosenBuyProductParams: {
+      id: '',
+      color: '',
+      price: '',
+      size: ''
+    },
    };
 
-
+   handleSubmit = (obj) => {
+    this.setState({
+      choosenBuyProductParams: {
+        id: obj.id,
+        color: obj.color,
+        price: obj.price,
+        size: obj.size,
+      },
+    });
+  };
+  
 
   render() {
     const {products} = this.state;
-    // console.log(products);
     return (
       <div className={styles.container}>
-        <ProductsList products={products}/>
+        <ProductsList products={products} onSubmit={this.handleSubmit}/>
       </div>
     );
   };

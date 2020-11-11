@@ -1,43 +1,26 @@
 import React from 'react';
 
+import ProductForm from '../ProductForm/ProductForm';
 import styles from './ProductItem.module.css';
 
-const ProductItem = ({product}) => {
-  const handleSubmit = () => {
-    console.log("Submit!!!")
-  }
-  const { image, name, description, colors, price, sizes, quantity, isNew} = product;
-  console.log(image);
+const ProductItem = ({product, onSubmit}) => {
+  const { image, name, description, isNew} = product;
   return (
   <>
-  {isNew && (<div className={styles.productItem__new}>NEW</div>)}
-  <img className={styles.productItem__image} src={image} alt={name}/>
-  <div className={styles.productItem__icon}></div>
-  <h2 className={styles.productItem__name}>{name}</h2>
-  <p className={styles.productItem__description}>{description}</p>
-  <p className={styles.productItem__price}>{price}</p>
-  <form onSubmit={handleSubmit}>
-    <label htmlFor="">
-      <select name="colorSelect" id="">
-        <option name='color' value='Цвет'>Цвет</option>
-      {  
-      colors.map(color => (
-        <option key={color} name="color" value={color}>{color}</option>
-      ))}
-      </select>
-    </label>
-    {sizes.map(size => (
-      <label key={size} htmlFor="">
-        <input name="size" value={size} type="radio"/>
-        {size}
-      </label>
-    ))}
-    <label htmlFor="">
-      {quantity}
-      <input type="number" name="quantity" value={quantity}/>
-    </label>
-    <input type="submit" value="КУПИТЬ"/>
-  </form>
+    {isNew ? (
+      <div className={styles.productItem__new}>new</div>
+    ) : (
+      <div className={`${styles.productItem__new} ${styles.makeTransparent}`}>new</div>
+    )}
+    <div className={styles.productItem__image_wrap}>
+      <img className={styles.productItem__image} src={image} alt={name}/>
+    </div>
+    <div className={styles.productItem__icon_wraper}>
+      <span className={styles.productItem__icon}></span>
+    </div>
+    <h2 className={styles.productItem__name}>{name}</h2>
+    <p className={styles.productItem__description}>{description}</p>
+    <ProductForm productInfo={product} onSubmit={onSubmit}/>
   </>
   );
 };
